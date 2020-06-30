@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (5.2.1)
+  - EmptyDataSet-Swift (5.0.0)
+  - FDFullscreenPopGesture (1.1)
+  - HandyJSON (5.0.2)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.4.3)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - EmptyDataSet-Swift
+  - FDFullscreenPopGesture
+  - HandyJSON
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - MBProgressHUD
+  - MJRefresh
+  - SnapKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - EmptyDataSet-Swift
+    - FDFullscreenPopGesture
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MBProgressHUD
+    - MJRefresh
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 00d1d6e67577c432ebffbaad933e9256907e107a
+
+COCOAPODS: 1.9.1
