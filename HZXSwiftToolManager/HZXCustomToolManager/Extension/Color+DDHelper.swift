@@ -55,13 +55,13 @@ extension UIColor {
         let blueColorStr = tempStr.getString(startIndex: 4, count: 2)
         
         //存储转换后的数值
-        var redColor:Int = 0
-        var greenColor:Int = 0
-        var blueColor:Int = 0
+        var redColor:UInt64 = 0
+        var greenColor:UInt64 = 0
+        var blueColor:UInt64 = 0
         //进行转换
-        Scanner(string: redColorStr).scanInt(&redColor)
-        Scanner(string: greenColorStr).scanInt(&greenColor)
-        Scanner(string: blueColorStr).scanInt(&blueColor)
+        Scanner(string: redColorStr).scanHexInt64(&redColor)
+        Scanner(string: greenColorStr).scanHexInt64(&greenColor)
+        Scanner(string: blueColorStr).scanHexInt64(&blueColor)
 
         /// 转化为UIColor
         defaultCoclor = UIColor(red: CGFloat(redColor)/255.0, green: CGFloat(greenColor)/255.0, blue: CGFloat(blueColor)/255.0, alpha: alpha)

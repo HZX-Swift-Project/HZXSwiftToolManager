@@ -17,24 +17,20 @@ class DDCustomTabBarController: UITabBarController {
     /// 在这个方法中 向tabbar中添加导航控制器
     private func addControllers() {
         /// 测试
-        addNavigationController(ViewController(), title: "测试", imageName: "", selectedImageName: "")
+        addNavigationController(ViewController(), title: "测试")
     }
     
     /// 创建并添加导航的具体实现
-    private func addNavigationController(_ rootVC: UIViewController, title: String?, imageName: String?, selectedImageName: String?){
-        var image: UIImage? {
-            guard let imageName = imageName else { return nil}
-            return UIImage(named: imageName)
-        }
-        var selectedImage: UIImage? {
-            guard let selectedImageName = selectedImageName else { return nil}
-            return UIImage(named: selectedImageName)
-        }
+    private func addNavigationController(_ rootVC: UIViewController, title: String? = nil, imageName: String? = nil, selectedImageName: String? = nil){
+        /// 未选中图片
+        let image = UIImage(named: imageName ?? "")
+        /// 已选中图片
+        let selectedImage = UIImage(named: selectedImageName ?? "")
+        /// tabbarItem
         let tabbarItem = UITabBarItem.init(title: title, image: image, selectedImage: selectedImage)
         configTabBarItems(tabbarItem)
         let naviVC = UINavigationController(rootViewController: rootVC)
         naviVC.tabBarItem = tabbarItem
-        
         addChild(naviVC)
     }
     

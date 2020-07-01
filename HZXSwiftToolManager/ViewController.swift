@@ -12,9 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.colorWithHexString("333333")
-        self.title = "测试一下"
-        DDMBProgressHUD.showTipMessage(message: "测试一下")
     }
 
 
