@@ -17,6 +17,9 @@ struct DDUserDefaluts {
      */
     
     //MARK: -------------- 存储用户信息
+    /// 用户Id
+    @DDCustomUserDefaluts(key: "DD_userID", defaultValue: "")
+    static var userId: String
     /// 用户手机号
     @DDCustomUserDefaluts(key: "DD_userTel", defaultValue: "")
     static var userTel: String
