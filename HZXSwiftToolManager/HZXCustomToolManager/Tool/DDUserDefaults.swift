@@ -38,8 +38,8 @@ struct DDUserDefaluts {
     @DDCustomUserDefaluts(key: "DD_isLogin", defaultValue: false)
     static var isLogin: Bool
     /// 是否显示了引导页
-    @DDCustomUserDefaluts(key: "DD_isGuided", defaultValue: false)
-    static var isGuided: Bool
+    @DDCustomUserDefaluts(key: "DD_isGuided", defaultValue: true)
+    static var showGuide: Bool
     
     //MARK: -------------- 存储第三方登录信息
     /// 设备token
