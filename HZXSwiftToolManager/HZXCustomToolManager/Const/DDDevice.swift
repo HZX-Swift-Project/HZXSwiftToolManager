@@ -19,15 +19,15 @@ let DD_IsiPhone = (DD_CurrentDeviceModel == UIUserInterfaceIdiom.phone)
 /// 刘海屏
 let DD_IsHasLiuHai = (DD_IsiPhone && DD_ScreenHeight >= 812)
 /// 状态栏高度
-let DD_StatusBarHeight:CGFloat = DD_IsHasLiuHai ? 44 : 20
+let DD_StatusBarHeight: CGFloat = DD_IsHasLiuHai ? 44 : 20
 /// 导航栏高度
-let DD_NavigationBarHeigh:CGFloat  = DD_IsHasLiuHai ? 88 : 64
+let DD_NavigationBarHeigh: CGFloat  = DD_IsHasLiuHai ? 88 : 64
 /// tabBar高度
-let DD_TabBarHeigh:CGFloat = DD_IsHasLiuHai ? 49 + 34 : 49
+let DD_TabBarHeigh: CGFloat = DD_IsHasLiuHai ? 49 + 34 : 49
 /// home indicator
-let DD_BottomSafeAreaHeight:CGFloat = DD_IsHasLiuHai ? 34 : 0
+let DD_BottomSafeAreaHeight: CGFloat = DD_IsHasLiuHai ? 34 : 0
 /// 安全区域的高度
-let DD_SafeAreaHeight:CGFloat = DD_ScreenHeight - DD_BottomSafeAreaHeight
+let DD_SafeAreaHeight: CGFloat = DD_ScreenHeight - DD_BottomSafeAreaHeight
 
 // MARK: ================= 获取App软件信息
 

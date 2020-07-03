@@ -29,5 +29,8 @@ let DD_CodeTime = 60
 /// 网络请求超时时间
 let DD_NetworkTimeOut = 15
 
-/// 网络请求超时时间
-let DD_LineHeight:CGFloat = 0.5
+/// 线条高度
+let DD_LineHeight: CGFloat = 0.5
+
+/// 动画时长
+let DD_AnimationTime: CGFloat = 0.25
