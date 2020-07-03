@@ -16,6 +16,6 @@ extension UIImageView {
     ///   - name: 网络图片地址
     ///   - placeHolderImage: 占位图
     func DD_setURLImage(urlStr: String?, placeHolderImage: UIImage? = DD_SquareDefaultImage) {
-        self.kf.setImage(with: DD_HTTPURLImageWith(urlStr), placeholder: placeHolderImage)
+        self.kf.setImage(with: DD_HTTPImage(urlStr), placeholder: placeHolderImage)
     }
 }

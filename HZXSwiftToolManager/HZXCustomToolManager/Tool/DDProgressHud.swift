@@ -18,7 +18,7 @@ class DDMBProgressHUD {
     private class func createHUD(view: UIView? = DD_KeyWindow, isMask: Bool = false, isCoverNavi: Bool = true) -> MBProgressHUD? {
         guard let superView = view else { return nil }
         let HUD = MBProgressHUD.showAdded(to: superView, animated: true)
-        let hudTop = isCoverNavi ? 0 : DD_NavigationBarHeigh
+        let hudTop = isCoverNavi ? 0 : DD_NavigationBarHeight
         HUD.frame = CGRect(x: 0, y: hudTop, width: DD_ScreenWidth, height: DD_ScreenHeight - hudTop)
         HUD.animationType = .zoom
         if isMask {
@@ -38,7 +38,7 @@ class DDMBProgressHUD {
         let HUD = createHUD(view: view, isMask: false, isCoverNavi: true)
         if let iconName = iconName {
             HUD?.mode = .customView
-            HUD?.customView = UIImageView(image: DD_UIImageNamed(iconName))
+            HUD?.customView = UIImageView(image: DD_UIImage(iconName))
         } else {
             HUD?.mode = .text
         }

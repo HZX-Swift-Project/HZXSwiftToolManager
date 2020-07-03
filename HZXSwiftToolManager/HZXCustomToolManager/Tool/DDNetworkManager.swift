@@ -136,7 +136,7 @@ extension DDNetworkManager {
                     formData.append(file as! Data, withName: withName, fileName: fileName, mimeType: mimeType)
                 } else if file is String {
                     /// 判断图片是String类型
-                    if let data = try? Data.init(contentsOf: DD_HTTPURLImageWith(file as? String)!) {
+                    if let data = try? Data.init(contentsOf: DD_HTTPImage(file as? String)!) {
                         formData.append(data, withName: withName, fileName: fileName, mimeType: "image/jpg")
                     }
                 } else if file is UIImage {

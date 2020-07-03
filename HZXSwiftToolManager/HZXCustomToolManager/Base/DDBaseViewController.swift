@@ -12,7 +12,7 @@ class DDBaseViewController: UIViewController {
     // MARK: ------------------------- 懒加载视图 用到的时候在初始化
     /// 导航栏试图
     lazy var naviImageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: DD_ScreenWidth, height: DD_NavigationBarHeigh))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: DD_ScreenWidth, height: DD_NavigationBarHeight))
         imageView.backgroundColor = DD_BlueColor
         imageView.isUserInteractionEnabled = true
         return imageView
@@ -36,7 +36,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// table表格
     lazy var mainTableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeigh, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeigh), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeight), style: .grouped)
         tableView.backgroundColor = DD_WhiteColor
         tableView.separatorStyle = .none
         tableView.keyboardDismissMode = .onDrag
@@ -54,7 +54,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// 滚动视图UIScrollView
     lazy var mainScrollView: UIScrollView = {
-        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeigh, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeigh))
+        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeight))
         scrollView.backgroundColor = DD_DefaultBgColor
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
@@ -175,7 +175,7 @@ extension DDBaseViewController: EmptyDataSetDelegate, EmptyDataSetSource {
     
     /// 占位图
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-        return DD_UIImageNamed("logo_")
+        return DD_UIImage("logo_")
     }
     /// 动画
     func imageAnimation(forEmptyDataSet scrollView: UIScrollView) -> CAAnimation? {
