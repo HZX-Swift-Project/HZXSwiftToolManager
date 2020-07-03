@@ -27,7 +27,7 @@ func DD_UIImage(_ name: String) -> UIImage? {
 }
 
 /// 把网络图转换成URL
-/// - Parameter name: 网络图片链接
+/// - Parameter urlStr: 网络图片链接
 /// - Returns: 处理好的URL
 func DD_HTTPImage(_ urlStr: String?) -> URL? {
     var httpUrlStr = ""
