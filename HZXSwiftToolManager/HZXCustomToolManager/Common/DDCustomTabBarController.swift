@@ -39,8 +39,8 @@ class DDCustomTabBarController: UITabBarController {
         //设置字体与图片距离
         tabbarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -2)
         ///未选中是的状态呢
-        tabbarItem.setTitleTextAttributes([NSAttributedString.Key.font : bold12Font, .foregroundColor: UIColor.colorWithHexString("777777")], for: UIControl.State.normal)
+        tabbarItem.setTitleTextAttributes([NSAttributedString.Key.font : DD_Bold12Font, .foregroundColor: UIColor.colorWithHexString("777777")], for: UIControl.State.normal)
         ///选中时的状态
-        tabbarItem.setTitleTextAttributes([.font : bold12Font, .foregroundColor: DD_BlueColor], for: UIControl.State.selected)
+        tabbarItem.setTitleTextAttributes([.font : DD_Bold12Font, .foregroundColor: DD_BlueColor], for: UIControl.State.selected)
     }
 }

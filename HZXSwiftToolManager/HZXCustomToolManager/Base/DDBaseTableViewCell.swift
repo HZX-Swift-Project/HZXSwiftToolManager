@@ -32,8 +32,11 @@ class DDBaseTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
         self.backgroundColor = DD_GrayLineColor
+        configNewView()
     }
     
+    /// 创建界面
+    func configNewView() {}
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -33,7 +33,7 @@ class DDCellView: UIView {
     private func configUI() {
         
         titleLabel.textColor = DD_BlackTextColor
-        titleLabel.font = regular15Font
+        titleLabel.font = DD_Regular15Font
         self.addSubview(titleLabel)
         
         clickButton.backgroundColor = DD_ClearColor

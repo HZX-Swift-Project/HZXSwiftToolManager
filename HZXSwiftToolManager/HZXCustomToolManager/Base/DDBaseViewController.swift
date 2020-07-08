@@ -28,7 +28,7 @@ class DDBaseViewController: UIViewController {
     /// 标题
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 44.0, y: DD_StatusBarHeight, width: DD_ScreenWidth - 88.0, height: 44.0))
-        label.font = regular17Font
+        label.font = DD_Regular17Font
         label.textColor = DD_WhiteColor
         label.textAlignment = .center
         naviImageView.addSubview(label)
@@ -160,14 +160,14 @@ extension DDBaseViewController: EmptyDataSetDelegate, EmptyDataSetSource {
     /// 空白界面占位标题
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         /// 配置字体属性
-        let attributed = [NSAttributedString.Key.font: regular15Font,
+        let attributed = [NSAttributedString.Key.font: DD_Regular15Font,
                           NSAttributedString.Key.foregroundColor: DD_BlackTextColor
         ]
         return NSAttributedString(string: "暂无数据", attributes: attributed)
     }
     /// 空白界面占位详细信息
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let attributed = [NSAttributedString.Key.font: regular15Font,
+        let attributed = [NSAttributedString.Key.font: DD_Regular15Font,
                           NSAttributedString.Key.foregroundColor: DD_GrayLineColor
         ]
         return NSAttributedString(string: "这个是详细信息", attributes: attributed)
@@ -183,7 +183,7 @@ extension DDBaseViewController: EmptyDataSetDelegate, EmptyDataSetSource {
     }
     /// 按钮标题
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> NSAttributedString? {
-        let attributed = [NSAttributedString.Key.font: regular15Font,
+        let attributed = [NSAttributedString.Key.font: DD_Regular15Font,
                           NSAttributedString.Key.foregroundColor: DD_BlueColor
         ]
         return NSAttributedString(string: "这个是按钮", attributes: attributed)

@@ -17,12 +17,8 @@ class DDSimpleTableViewCell: DDBaseTableViewCell {
     /// 右边箭头
     let rightImageView = UIImageView()
     
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    func configNewView() {
-        titleLabel.font = regular15Font
+    override func configNewView() {
+        titleLabel.font = DD_Regular15Font
         titleLabel.textColor = DD_BlackTextColor
         self.contentView.addSubview(titleLabel)
         
