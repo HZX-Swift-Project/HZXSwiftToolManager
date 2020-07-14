@@ -8,7 +8,9 @@
 
 import Foundation
 
-/// 手机短信验证码类型
+/**
+ * 手机短信验证码类型
+ */
 public enum DDPhoneCodeType: Int {
     /// 注册
     case register = 0
@@ -18,7 +20,9 @@ public enum DDPhoneCodeType: Int {
     case changePwd
 }
 
-/// 订单状态
+/**
+ * 订单状态
+ */
 public enum DDOrderStauts: Int {
     /// 全部订单
     case all = 0
