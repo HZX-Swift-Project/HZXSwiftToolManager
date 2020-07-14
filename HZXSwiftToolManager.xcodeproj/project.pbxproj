@@ -41,6 +41,7 @@
 		48508BA724AB3CC4000EA580 /* DDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8A24AB3CC4000EA580 /* DDNetworkManager.swift */; };
 		48508BA824AB3CC4000EA580 /* DDDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8B24AB3CC4000EA580 /* DDDateManager.swift */; };
 		48508BA924AB3CC4000EA580 /* DDCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8C24AB3CC4000EA580 /* DDCacheManager.swift */; };
+		4890BCE524BDB450004B870F /* DDCustomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890BCE424BDB450004B870F /* DDCustomEnum.swift */; };
 		E4F8A315C9ED847158016E7A /* Pods_HZXSwiftToolManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ADF9BA79918B04BBAE63AA /* Pods_HZXSwiftToolManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		48508B8A24AB3CC4000EA580 /* DDNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNetworkManager.swift; sourceTree = "<group>"; };
 		48508B8B24AB3CC4000EA580 /* DDDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDateManager.swift; sourceTree = "<group>"; };
 		48508B8C24AB3CC4000EA580 /* DDCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCacheManager.swift; sourceTree = "<group>"; };
+		4890BCE424BDB450004B870F /* DDCustomEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDCustomEnum.swift; sourceTree = "<group>"; };
 		C4D043C9CF7814D259565D75 /* Pods-HZXSwiftToolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZXSwiftToolManager.release.xcconfig"; path = "Target Support Files/Pods-HZXSwiftToolManager/Pods-HZXSwiftToolManager.release.xcconfig"; sourceTree = "<group>"; };
 		E1ADF9BA79918B04BBAE63AA /* Pods_HZXSwiftToolManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZXSwiftToolManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 				48508B7524AB3CC4000EA580 /* DDDomain.swift */,
 				48508B7224AB3CC4000EA580 /* DDFont.swift */,
 				48508B7024AB3CC4000EA580 /* DDLimitLength.swift */,
+				4890BCE424BDB450004B870F /* DDCustomEnum.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				48508BA724AB3CC4000EA580 /* DDNetworkManager.swift in Sources */,
 				48508B9024AB3CC4000EA580 /* UIScrollView+DDHelper.swift in Sources */,
 				48508BA124AB3CC4000EA580 /* RYNumberKeyboard.m in Sources */,
+				4890BCE524BDB450004B870F /* DDCustomEnum.swift in Sources */,
 				48508B4F24AB3859000EA580 /* AppDelegate.swift in Sources */,
 				48508B9824AB3CC4000EA580 /* DDColor.swift in Sources */,
 			);
