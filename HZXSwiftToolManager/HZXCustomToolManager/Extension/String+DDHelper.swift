@@ -171,7 +171,7 @@ extension String {
     /// MD5加密 默认是32位小写加密
     /// - Parameter type: 加密类型
     /// - Returns: 加密字符串
-    func md5Encrypt(_ md5Type: MD5EncryptType = .lowercase32) -> String {
+    func DDMD5Encrypt(_ md5Type: MD5EncryptType = .lowercase32) -> String {
         guard self.count > 0 else {
             print("⚠️⚠️⚠️md5加密无效的字符串⚠️⚠️⚠️")
             return ""
