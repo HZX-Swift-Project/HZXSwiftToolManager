@@ -41,6 +41,7 @@
 		48508BA724AB3CC4000EA580 /* DDNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8A24AB3CC4000EA580 /* DDNetworkManager.swift */; };
 		48508BA824AB3CC4000EA580 /* DDDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8B24AB3CC4000EA580 /* DDDateManager.swift */; };
 		48508BA924AB3CC4000EA580 /* DDCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48508B8C24AB3CC4000EA580 /* DDCacheManager.swift */; };
+		488695E324CEC84400D78607 /* String+DDEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488695E224CEC84300D78607 /* String+DDEncrypt.swift */; };
 		4890BCE524BDB450004B870F /* DDCustomEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890BCE424BDB450004B870F /* DDCustomEnum.swift */; };
 		E4F8A315C9ED847158016E7A /* Pods_HZXSwiftToolManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ADF9BA79918B04BBAE63AA /* Pods_HZXSwiftToolManager.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		48508B8A24AB3CC4000EA580 /* DDNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNetworkManager.swift; sourceTree = "<group>"; };
 		48508B8B24AB3CC4000EA580 /* DDDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDateManager.swift; sourceTree = "<group>"; };
 		48508B8C24AB3CC4000EA580 /* DDCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCacheManager.swift; sourceTree = "<group>"; };
+		488695E224CEC84300D78607 /* String+DDEncrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DDEncrypt.swift"; sourceTree = "<group>"; };
 		4890BCE424BDB450004B870F /* DDCustomEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDCustomEnum.swift; sourceTree = "<group>"; };
 		C4D043C9CF7814D259565D75 /* Pods-HZXSwiftToolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZXSwiftToolManager.release.xcconfig"; path = "Target Support Files/Pods-HZXSwiftToolManager/Pods-HZXSwiftToolManager.release.xcconfig"; sourceTree = "<group>"; };
 		E1ADF9BA79918B04BBAE63AA /* Pods_HZXSwiftToolManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZXSwiftToolManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 			children = (
 				48508B6E24AB3CC4000EA580 /* Color+DDHelper.swift */,
 				48508B6C24AB3CC4000EA580 /* String+DDHelper.swift */,
+				488695E224CEC84300D78607 /* String+DDEncrypt.swift */,
 				48508B6924AB3CC4000EA580 /* UIButton+DDHelper.swift */,
 				48508B6D24AB3CC4000EA580 /* UIImage+DDHelper.swift */,
 				48508B6A24AB3CC4000EA580 /* UIImageView+DDHelper.swift */,
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48508B8E24AB3CC4000EA580 /* UIButton+DDHelper.swift in Sources */,
+				488695E324CEC84400D78607 /* String+DDEncrypt.swift in Sources */,
 				48508B9424AB3CC4000EA580 /* DDLimitLength.swift in Sources */,
 				48508B8D24AB3CC4000EA580 /* UIView+DDHelper.swift in Sources */,
 				48508BA224AB3CC4000EA580 /* DDBaseViewController.swift in Sources */,
