@@ -9,7 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 class DDBaseViewController: UIViewController {
-    // MARK: ------------------------- 懒加载视图 用到的时候在初始化
+    // MARK: ------------------------------------ 懒加载视图 用到的时候在初始化
     /// 导航栏试图
     lazy var naviImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: DD_ScreenWidth, height: DD_NaviAndStatusTotalHeight))
@@ -63,7 +63,7 @@ class DDBaseViewController: UIViewController {
         return scrollView
     }()
     
-    // MARK: ------------------------- ViewDidLoad初始化
+    // MARK: ------------------------------------ ViewDidLoad初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         /// 支持侧滑返回
@@ -77,18 +77,22 @@ class DDBaseViewController: UIViewController {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
-    //MARK: ----- 点击空界面的方法
+    
+}
+
+extension DDBaseViewController {
+    //MARK: ------------------------------------ 点击事件
+    //MARK: - 点击空界面的方法
     /// 点击空白界面的操作 可在子类中重写这个方法
     func superClickEmptyViewAction() {}
     /// 点击空白界面按钮时候的操作  可在子类中重写这个方法
     func superClickEmptyViewButtonAction() {}
-    //MARK: ----- 拨打电话
-    
+    //MARK: - 拨打电话
     /// 拨打电话
     /// - Parameter with: 电话号码
     func makePhone(with: String?) {
         /// 判断是否有获取到电话信息
-        guard let telphone = with, !telphone.trimmingAllWhiteSpaces().isEmpty else {
+        guard let telphone = with, !telphone.isEmptyString() else {
             DDMBProgressHUD.showTipMessage(message: "为获取到电话号码")
             return
         }
@@ -100,8 +104,9 @@ class DDBaseViewController: UIViewController {
         }
     }
 }
-// MARK: ------------------------- 系统弹窗提示
+
 extension DDBaseViewController {
+    // MARK: ------------------------------------ 系统弹窗提示
     typealias alertHandler = () -> Void
     
     /// 弹出系统对话框（只有一个确定按钮）
@@ -153,9 +158,10 @@ extension DDBaseViewController {
         self.present(alerAction, animated: true, completion: nil)
     }
 }
-// MARK: ------------------------- 空白界面占位图
+
 import EmptyDataSet_Swift
 extension DDBaseViewController: EmptyDataSetDelegate, EmptyDataSetSource {
+    // MARK: ------------------------------------ 空白界面占位图
     //MARK: - DZNEmptyDataSetSource
     /// 空白界面占位标题
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
