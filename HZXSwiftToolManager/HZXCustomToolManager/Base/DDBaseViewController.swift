@@ -12,14 +12,14 @@ class DDBaseViewController: UIViewController {
     // MARK: ------------------------- 懒加载视图 用到的时候在初始化
     /// 导航栏试图
     lazy var naviImageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: DD_ScreenWidth, height: DD_NavigationBarHeight))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: DD_ScreenWidth, height: DD_NaviAndStatusTotalHeight))
         imageView.backgroundColor = DD_BlueColor
         imageView.isUserInteractionEnabled = true
         return imageView
     }()
     /// 返回按钮
     lazy var popButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: DD_StatusBarHeight, width: 44, height: 44))
+        let button = UIButton(frame: CGRect(x: 0, y: DD_StatusBarHeight, width: DD_NavigationBarHeight, height: DD_NavigationBarHeight))
         button.setImage(DD_LeftPopImage, for: .normal)
         button.setImage(DD_LeftPopImage, for: .highlighted)
         naviImageView.addSubview(button)
@@ -27,7 +27,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// 标题
     lazy var titleLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 44.0, y: DD_StatusBarHeight, width: DD_ScreenWidth - 88.0, height: 44.0))
+        let label = UILabel(frame: CGRect(x: DD_NavigationBarHeight, y: DD_StatusBarHeight, width: DD_ScreenWidth - 88.0, height: DD_NavigationBarHeight))
         label.font = DD_Regular17Font
         label.textColor = DD_WhiteColor
         label.textAlignment = .center
@@ -36,7 +36,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// table表格
     lazy var mainTableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeight), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight), style: .grouped)
         tableView.backgroundColor = DD_WhiteColor
         tableView.separatorStyle = .none
         tableView.keyboardDismissMode = .onDrag
@@ -54,7 +54,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// 滚动视图UIScrollView
     lazy var mainScrollView: UIScrollView = {
-        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeight))
+        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight))
         scrollView.backgroundColor = DD_DefaultBgColor
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never

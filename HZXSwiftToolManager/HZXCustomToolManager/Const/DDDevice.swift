@@ -21,7 +21,9 @@ let DD_IsHasLiuHai = (DD_IsiPhone && DD_ScreenHeight >= 812)
 /// 状态栏高度
 let DD_StatusBarHeight: CGFloat = DD_IsHasLiuHai ? 44 : 20
 /// 导航栏高度
-let DD_NavigationBarHeight: CGFloat  = DD_IsHasLiuHai ? 88 : 64
+let DD_NavigationBarHeight: CGFloat  = 44.0
+/// 导航栏和状态栏高度总和
+let DD_NaviAndStatusTotalHeight = DD_StatusBarHeight + DD_NavigationBarHeight
 /// tabBar高度
 let DD_TabBarHeight: CGFloat = DD_IsHasLiuHai ? 49 + 34 : 49
 /// home indicator
