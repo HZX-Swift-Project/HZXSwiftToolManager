@@ -36,7 +36,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// table表格
     lazy var mainTableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight), style: .grouped)
+        let tableView = UITableView(frame: CGRect(x: 0.0, y: DD_NaviAndStatusTotalHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight), style: .grouped)
         tableView.backgroundColor = DD_WhiteColor
         tableView.separatorStyle = .none
         tableView.keyboardDismissMode = .onDrag
@@ -54,7 +54,7 @@ class DDBaseViewController: UIViewController {
     }()
     /// 滚动视图UIScrollView
     lazy var mainScrollView: UIScrollView = {
-        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight))
+        let scrollView = UIScrollView(frame: CGRect(x: 0.0, y: DD_NaviAndStatusTotalHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight))
         scrollView.backgroundColor = DD_DefaultBgColor
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
