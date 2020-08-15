@@ -23,7 +23,7 @@ class DDWebViewController: DDBaseViewController {
     }
     // MARK: ----------------------- 创建WebView
     func configWebView() {
-        webView.frame = CGRect(x: 0, y: DD_NavigationBarHeight, width: DD_ScreenWidth, height: DD_ScreenHeight - DD_BottomSafeAreaHeight - DD_NavigationBarHeight)
+        webView.frame = CGRect(x: 0, y: DD_NaviAndStatusTotalHeight, width: DD_ScreenWidth, height: DD_SafeAreaHeight - DD_NaviAndStatusTotalHeight)
         /// 先添加到界面 再加载网址 否则控制台会打印一串东西
         view.addSubview(webView)
         
