@@ -16,14 +16,14 @@ extension UIColor {
     
     /// 十六进制字符串获取颜色
     /// - Parameters:
-    ///   - hexString: 16进制色值  支持@“#123456”、 @“0X123456”、 @“123456”三种格式
+    ///   - hex: 16进制色值  支持@“#123456”、 @“0X123456”、 @“123456”三种格式
     ///   - alpha: 透明度
     /// - Returns: 处理后的颜色
-    public class func color(hex hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    public class func color(hex: String, alpha: CGFloat = 1.0) -> UIColor {
         var defaultCoclor = UIColor.clear
         //去除空白字符
         let whitespace = NSCharacterSet.whitespacesAndNewlines
-        var tempStr = hexString.trimmingCharacters(in: whitespace).uppercased()
+        var tempStr = hex.trimmingCharacters(in: whitespace).uppercased()
         //判断字符串你是否是以6-8位
         if tempStr.count < 6 || tempStr.count > 8 {
             return defaultCoclor
@@ -92,14 +92,14 @@ extension UIColor {
     
     /// 适配暗黑模式颜色   颜色传入的是16进制字符串 还有颜色的透明度
     /// - Parameters:
-    ///   - lightHexString: 普通模式颜色
+    ///   - lightHex: 普通模式颜色
     ///   - lightAlpha: 普通模式颜色透明度
-    ///   - darkHexString: 暗黑模式颜色透明度
+    ///   - darkHex: 暗黑模式颜色透明度
     ///   - darkAlpha:  暗黑模式颜色
     /// - Returns: 处理后的颜色
-    public class func dynamicColor(lightHexString: String, lightAlpha: CGFloat = 1.0, darkHexString: String, darkAlpha: CGFloat = 1.0) -> UIColor {
-        let lightColor = color(hex: lightHexString, alpha: lightAlpha)
-        let darkColor = color(hex: darkHexString, alpha: darkAlpha)
+    public class func dynamicColor(lightHex: String, lightAlpha: CGFloat = 1.0, darkHex: String, darkAlpha: CGFloat = 1.0) -> UIColor {
+        let lightColor = color(hex: lightHex, alpha: lightAlpha)
+        let darkColor = color(hex: darkHex, alpha: darkAlpha)
         return UIColor.dynamicColor(lightColor: lightColor, darkColor: darkColor)
     }
 }

@@ -46,4 +46,4 @@ let DD_GrayLineColor = UIColor.color(hex: "E0E0E0")
 
 // MARK: ---------------------- 边框颜色
 /// 边框颜色
-let DD_GrayBoarderColor = UIColor.color(hex: "E0E0E0") 
+let DD_GrayBoarderColor = UIColor.color(hex: "E0E0E0")
