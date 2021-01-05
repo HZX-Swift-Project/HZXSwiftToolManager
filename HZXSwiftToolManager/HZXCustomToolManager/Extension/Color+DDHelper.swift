@@ -15,18 +15,11 @@ extension UIColor {
     }
     
     /// 十六进制字符串获取颜色
-    /// - Parameter hexString: 16进制色值  支持@“#123456”、 @“0X123456”、 @“123456”三种格式
-    /// - Returns: 处理后的颜色
-    public class func colorWithHexString(_ hexString: String) -> UIColor {
-        return UIColor.colorWithHexString(hexString, alpha: 1.0)
-    }
-    
-    /// 十六进制字符串获取颜色
     /// - Parameters:
     ///   - hexString: 16进制色值  支持@“#123456”、 @“0X123456”、 @“123456”三种格式
     ///   - alpha: 透明度
     /// - Returns: 处理后的颜色
-    public class func colorWithHexString(_ hexString: String, alpha: CGFloat) -> UIColor {
+    public class func color(hex hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         var defaultCoclor = UIColor.clear
         //去除空白字符
         let whitespace = NSCharacterSet.whitespacesAndNewlines
@@ -73,7 +66,7 @@ extension UIColor {
     ///   - lightColor: 普通模式颜色
     ///   - darkColor: 暗黑模式颜色
     /// - Returns: 处理后的颜色
-    public class func colorWithUIColor(lightColor: UIColor?, darkColor: UIColor?) -> UIColor {
+    public class func dynamicColor(lightColor: UIColor?, darkColor: UIColor?) -> UIColor {
         if #available(iOS 13.0, *) {
             return UIColor.init { (trainCollection) -> UIColor in
                 // 判断是light模式 返回lightColor
@@ -97,15 +90,6 @@ extension UIColor {
         }
     }
     
-    /// 适配暗黑模式颜色   颜色传入的是16进制字符串
-    /// - Parameters:
-    ///   - lightHexString: 普通模式颜色
-    ///   - darkHexString: 暗黑模式颜色
-    /// - Returns: 处理后的颜色
-    public class func colorWithLightHexColorStr(lightHexString: String, darkHexString: String) -> UIColor {
-        return UIColor.colorWithUIColor(lightColor: colorWithHexString(lightHexString), darkColor: colorWithHexString(darkHexString))
-    }
-    
     /// 适配暗黑模式颜色   颜色传入的是16进制字符串 还有颜色的透明度
     /// - Parameters:
     ///   - lightHexString: 普通模式颜色
@@ -113,9 +97,9 @@ extension UIColor {
     ///   - darkHexString: 暗黑模式颜色透明度
     ///   - darkAlpha:  暗黑模式颜色
     /// - Returns: 处理后的颜色
-    public class func colorWithHexColorStr(lightHexString: String, lightAlpha: CGFloat, darkHexString: String, darkAlpha: CGFloat) -> UIColor {
-        let lightColor = colorWithHexString(lightHexString, alpha: lightAlpha)
-        let darkColor = colorWithHexString(darkHexString, alpha: darkAlpha)
-        return UIColor.colorWithUIColor(lightColor: lightColor, darkColor: darkColor)
+    public class func dynamicColor(lightHexString: String, lightAlpha: CGFloat = 1.0, darkHexString: String, darkAlpha: CGFloat = 1.0) -> UIColor {
+        let lightColor = color(hex: lightHexString, alpha: lightAlpha)
+        let darkColor = color(hex: darkHexString, alpha: darkAlpha)
+        return UIColor.dynamicColor(lightColor: lightColor, darkColor: darkColor)
     }
 }

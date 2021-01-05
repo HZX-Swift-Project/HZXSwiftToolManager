@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(DDAppNeedUpdate("1.0.1.0.0.01") ? "更新" : "不更新")
     }
 
 

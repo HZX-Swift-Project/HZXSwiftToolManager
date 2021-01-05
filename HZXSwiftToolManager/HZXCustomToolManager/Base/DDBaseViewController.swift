@@ -49,7 +49,6 @@ class DDBaseViewController: UIViewController {
             tableView.estimatedSectionHeaderHeight = 0.0
             tableView.estimatedSectionFooterHeight = 0.0
         }
-        view.addSubview(tableView)
         return tableView
     }()
     /// 滚动视图UIScrollView
@@ -59,7 +58,6 @@ class DDBaseViewController: UIViewController {
         if #available(iOS 11.0, *) {
             scrollView.contentInsetAdjustmentBehavior = .never
         }
-        view.addSubview(scrollView)
         return scrollView
     }()
     
