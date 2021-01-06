@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MJRefresh
 private class YJGIFRefreshHeader: MJRefreshGifHeader {
     override func prepare() {
         super.prepare()

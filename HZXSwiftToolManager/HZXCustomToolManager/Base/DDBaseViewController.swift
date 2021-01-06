@@ -8,6 +8,8 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import FDFullscreenPopGesture
+
 class DDBaseViewController: UIViewController {
     // MARK: ------------------------------------ 懒加载视图 用到的时候在初始化
     /// 导航栏试图
