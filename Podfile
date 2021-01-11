@@ -17,5 +17,6 @@ target 'HZXSwiftToolManager' do
   pod 'SnapKit'
   pod 'EmptyDataSet-Swift'
   pod 'FDFullscreenPopGesture'
+  pod 'Then'
 
 end
