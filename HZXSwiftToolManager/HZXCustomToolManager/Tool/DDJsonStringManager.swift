@@ -2,7 +2,7 @@
 //  DDJsonStringManager.swift
 //  HZXSwiftToolProject
 //
-//  Created by 侯仲祥 on 2020/5/27.
+//  Created by Meet on 2020/5/27.
 //  Copyright © 2020 houZhongXiang. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  DDSimpleTableViewCell.swift
 //  haiTongApp
 //
-//  Created by 侯仲祥 on 2020/5/16.
+//  Created by Meet on 2020/5/16.
 //  Copyright © 2020 houZhongXiang. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  UIButton+DDHelper.swift
 //  haiTongApp
 //
-//  Created by 侯仲祥 on 2020/6/28.
+//  Created by Meet on 2020/6/28.
 //  Copyright © 2020 houZhongXiang. All rights reserved.
 //
 

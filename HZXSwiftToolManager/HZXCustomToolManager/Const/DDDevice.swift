@@ -2,7 +2,7 @@
 //  DDDeviceConst.swift
 //  DDSwiftToolProject
 //
-//  Created by 侯仲祥 on 2020/4/27.
+//  Created by Meet on 2020/4/27.
 //  Copyright © 2020 houZhongXiang. All rights reserved.
 //
 
@@ -17,9 +17,9 @@ let DD_ScreenHeight = UIScreen.main.bounds.height
 /// 判断是否是iPhone
 let DD_IsiPhone = (DD_CurrentDeviceModel == UIUserInterfaceIdiom.phone)
 /// 刘海屏
-let DD_IsHasLiuHai = (DD_IsiPhone && DD_ScreenHeight >= 812)
+let DD_IsHasLiuHai = judgeHasLiuHai()
 /// 状态栏高度
-let DD_StatusBarHeight: CGFloat = DD_IsHasLiuHai ? 44 : 20
+let DD_StatusBarHeight = getDeviceStatusBarHeight()
 /// 导航栏高度
 let DD_NavigationBarHeight: CGFloat  = 44.0
 /// 导航栏和状态栏高度总和
@@ -32,7 +32,6 @@ let DD_BottomSafeAreaHeight: CGFloat = DD_IsHasLiuHai ? 34 : 0
 let DD_SafeAreaHeight: CGFloat = DD_ScreenHeight - DD_BottomSafeAreaHeight
 
 // MARK: ================= 获取App软件信息
-
 /// 获取KeyWindow
 let DD_KeyWindow = getKeyWindow()
 /// 获取软件的AppDelegate
@@ -50,7 +49,34 @@ private func getCurrentDevieModel() -> UIUserInterfaceIdiom {
         return UI_USER_INTERFACE_IDIOM()
     }
 }
+
 /// 获取keyWindow
 private func getKeyWindow() -> UIWindow? {
     return UIApplication.shared.keyWindow
 }
+
+/// 获取状态栏高度
+/// - Returns: 状态栏高度
+private func getDeviceStatusBarHeight() -> CGFloat {
+    if #available(iOS 13.0, *) {
+        return UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.size.height ?? 44.0
+    } else {
+        return UIApplication.shared.statusBarFrame.size.height
+    }
+}
+
+/// 判断设备是否有刘海
+/// - Returns: 是否有刘海
+private func judgeHasLiuHai() -> Bool {
+    if DD_CurrentDeviceModel != .phone {
+        return false
+    }
+    if #available(iOS 11.0, *) {
+        return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0 > 0
+    } else {
+        return false;
+    }
+}
+
+
+

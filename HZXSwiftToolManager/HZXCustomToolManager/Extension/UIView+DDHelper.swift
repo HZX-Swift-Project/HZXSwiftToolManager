@@ -2,12 +2,12 @@
 //  UIView+DDHelper.swift
 //  DDSwiftToolProject
 //
-//  Created by 侯仲祥 on 2020/4/27.
+//  Created by Meet on 2020/4/27.
 //  Copyright © 2020 houZhongXiang. All rights reserved.
 //
 
 import UIKit
-
+import SnapKit
 // MARK: -------------------------------- 快速获取Frame信息
 extension UIView {
     /// 左顶点
@@ -114,6 +114,7 @@ extension UIView {
     }
 }
 
+// MARK: -------------------------------- 剪切圆角
 extension UIView {
     /// 给视图剪切圆角
     ///
@@ -131,5 +132,28 @@ extension UIView {
         maskLayer.frame = self.bounds
         maskLayer.path = maskPath.cgPath
         self.layer.mask = maskLayer
+    }
+}
+
+// MARK: -------------------------------- 对Snpkit封装
+extension UIView {
+    public func prepareConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> [Constraint] {
+        return self.snp.prepareConstraints(closure)
+    }
+    
+    public func makeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+        self.snp.makeConstraints(closure)
+    }
+    
+    public func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+        self.snp.remakeConstraints(closure)
+    }
+    
+    public func updateConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+        self.snp.updateConstraints(closure)
+    }
+
+    public func removeConstraints() {
+        self.snp.removeConstraints()
     }
 }
