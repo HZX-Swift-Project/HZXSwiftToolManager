@@ -157,3 +157,15 @@ extension UIView {
         self.snp.removeConstraints()
     }
 }
+
+// MARK: ---------------------------------- 对约束的扩展
+extension NSLayoutConstraint {
+    @IBInspectable var adapterScreen: Bool {
+        get { return true }
+        set {
+            if newValue {
+               self.constant = self.constant * DD_Scale
+            }
+        }
+    }
+}
